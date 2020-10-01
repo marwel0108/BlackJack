@@ -1,0 +1,16 @@
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\bin\Debug\LearningProyect.exe.config
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\bin\Debug\LearningProyect.exe
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\bin\Debug\LearningProyect.pdb
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.csprojAssemblyReference.cache
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\MainWindow.g.cs
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\App.g.cs
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect_MarkupCompile.cache
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect_MarkupCompile.lref
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\MainWindow.baml
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.g.resources
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.Properties.Resources.resources
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.csproj.GenerateResource.cache
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.csproj.CoreCompileInputs.cache
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.exe
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\LearningProyect.pdb
+C:\Users\marwe\source\repos\LearningProyect\LearningProyect\obj\Debug\App.baml

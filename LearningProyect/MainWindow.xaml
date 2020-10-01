@@ -1,0 +1,248 @@
+﻿<Window x:Class="LearningProyect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearningProyect"
+        mc:Ignorable="d"
+        Title="Primer prueba WPF" 
+        Height="600" 
+        Width="800"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Loaded="window_Loaded">
+    <Grid Height="600" Margin="0,0,-0.4,0" VerticalAlignment="Center">
+        <Rectangle x:Name="Table" 
+                   Height="600" 
+                   Width="800" 
+                   Stroke="#7D2308" 
+                   VerticalAlignment="Bottom" 
+                   StrokeThickness="20" 
+                   Margin="0,0,0.4,0">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.0" Color="#71FF76"></GradientStop>
+                    <GradientStop Offset="0.25" Color="#0B900F"></GradientStop>
+                    <GradientStop Offset="0.50" Color="#007B04"></GradientStop>
+                    <GradientStop Offset="0.75" Color="#075502"></GradientStop>
+                    <GradientStop Offset="1.0" Color="#004102"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border Name="playerZoneBorder" 
+                BorderThickness="10" 
+                CornerRadius="10" 
+                BorderBrush="#0D3B00" 
+                Margin="104,370,96.4,24" 
+                MouseEnter="border_playerZoneBorder_Enter"
+                MouseLeave="border_playerZoneBorder_Leave">
+            <StackPanel x:Name="PlayerZone" 
+                    Orientation="Horizontal" 
+                    Width="600">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0.0" Color="#71FF76"></GradientStop>
+                        <GradientStop Offset="0.25" Color="#0B900F"></GradientStop>
+                        <GradientStop Offset="0.50" Color="#007B04"></GradientStop>
+                        <GradientStop Offset="0.75" Color="#075502"></GradientStop>
+                        <GradientStop Offset="1.0" Color="#004102"></GradientStop>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            </StackPanel>
+        </Border>
+        <Button x:Name="AddCard" 
+                    Click="btn_AddCard_Click"
+                    MouseEnter="btn_AddCard_MouseEnter"
+                    MouseLeave="btn_AddCard_MouseLeave"
+                    Content="Add Card"
+                    VerticalAlignment="Bottom" 
+                    Margin="193,0,508.4,235"
+                    Background="#29D100">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="#29D100"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#29D100"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button x:Name="StopGame" 
+                    Click="btn_StopGame_Click"
+                    MouseEnter="btn_StopGame_MouseEnter"
+                    MouseLeave="btn_StopGame_MouseLeave"
+                    Content="Guardar puntos"
+                    VerticalAlignment="Bottom" 
+                    Margin="352,0,348.4,235"
+                    Background="#B4B403">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="#B4B403"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#B4B403"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button x:Name="Reset" 
+                Click="btn_Reset_Click"
+                MouseEnter="btn_Reset_MouseEnter"
+                MouseLeave="btn_Reset_MouseLeave"
+                Content="Reiniciar"
+                VerticalAlignment="Bottom" 
+                Margin="506,0,194.4,235"
+                Background="#E85E08" RenderTransformOrigin="0.321,0.52">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="#E85E08"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#E85E08"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Border Name="pcZoneBorder" 
+                BorderThickness="10" 
+                CornerRadius="10" 
+                BorderBrush="#0D3B00" 
+                Margin="104,28,96.4,366" 
+                MouseEnter="border_pcZoneBorder_Enter"
+                MouseLeave="border_pcZoneBorder_Leave">
+            <StackPanel x:Name="PCZone"
+                    Orientation="Horizontal"
+                    Width="600">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0.0" Color="#71FF76"></GradientStop>
+                        <GradientStop Offset="0.25" Color="#0B900F"></GradientStop>
+                        <GradientStop Offset="0.50" Color="#007B04"></GradientStop>
+                        <GradientStop Offset="0.75" Color="#075502"></GradientStop>
+                        <GradientStop Offset="1.0" Color="#004102"></GradientStop>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            </StackPanel>
+        </Border>
+        <Button x:Name="Quit"
+                Click="btn_Quit_Click"
+                MouseEnter="btn_Quit_MouseEnter"
+                MouseLeave="btn_Quit_MouseLeave"
+                Content="X"
+                Width="35" 
+                Height="35" 
+                Margin="31,28,729.4,532"
+                Background="#F3210B">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="#F3210B"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="#F3210B"
+                                            Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.7"/>
+                            <ColorAnimation To="White"
+                                            Storyboard.TargetProperty="(Button.Foreground).(SolidColorBrush.Color)"
+                                            Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button x:Name="pPoints"
+                Content="Tus puntos: 0"
+                Background="Black" 
+                Margin="193,259,446.4,293" 
+                Height="Auto"
+                FontWeight="Bold"
+                Foreground="Red"/>
+        <Button x:Name="pcPoints"
+                Content="Puntos de pc: 0"
+                Background="Black" 
+                Margin="446,259,194.4,293" 
+                Height="Auto"
+                FontWeight="Bold"
+                Foreground="Red"/>
+        <Button x:Name="playerRounds"
+                Content="0"
+                Background="Black" 
+                Margin="33,484,701.4,24" 
+                Height="Auto"
+                FontWeight="Bold"
+                FontSize="40"
+                Foreground="Red"/>
+        <Button x:Name="pcRounds"
+                Content="0"
+                Background="Black" 
+                Margin="709,30,28.4,478" 
+                Height="Auto"
+                FontWeight="Bold"
+                FontSize="40"
+                Foreground="Red"/>
+    </Grid>
+</Window>
